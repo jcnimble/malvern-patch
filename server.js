@@ -11,9 +11,9 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 // Require all models
-var db = require("./models");
+const db = require("./models");
 
-var PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
 // Initialize Express
 var app = express();
@@ -39,10 +39,10 @@ app.use(express.json());
 // Make public a static folder
 // app.use(express.static("public"));
 
-var MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/malvernptach";
+require('dotenv').config();
 
 // Connect to the Mongo DB
-mongoose.connect(MONGODB_URI);
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 
