@@ -1,0 +1,27 @@
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 id="headfont">Get to Know Malvern, PA</h1>
+      <p class="lead">Catch a train on the Main Line to the Culture and History of Chester County</p>
+    </div>
+  </div>
+<section id = "articles" class ="container"></section>
+<h1>Articles</h1>
+
+{{#each article}}
+<div class="card">
+    <div class="card-header">
+      <h4>{{title}}</h4>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{link}}</h5>
+      <p class="card-text">Article copy</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+{{else}}
+<p>No articles available</p>
+{{/each}}
+
+</section>
+
+  
