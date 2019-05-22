@@ -39,8 +39,10 @@ app.use(express.json());
 // Make public a static folder
 // app.use(express.static("public"));
 
+var MONGODB_URI = process.env.MONGODB_URI ||"mongodb://localhost/malvernptach";
+
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/malvernptach", { useNewUrlParser: true });
+mongoose.connect(MONGODB_URI);
 
 // Routes
 
